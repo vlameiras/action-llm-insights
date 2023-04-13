@@ -25,14 +25,14 @@ if [ $exit_code -ne 0 ]; then
 fi
 
 # Ask the user if they want to proceed with the commit
-echo "Do you like pie?"
-read -r pie
-if [[ $pie == y* ]]; then
-    echo "You do! Awesome."
-else
-    echo "I don't like it much, either."
-fi
-
+while true; do
+    read -p "$(echo -e ${YELLOW}LLM Insights completed successfully. Do you want to proceed with the commit? [y/n]: ${NC})" yn
+    case $yn in
+        [Yy]* ) break;;
+        [Nn]* ) echo -e "${RED}Commit aborted by user.${NC}"; exit 1;;
+        * ) echo "Please answer y (yes) or n (no).";;
+    esac
+done
 
 # If the user chooses to proceed, continue with the commit
 echo -e "${GREEN}Proceeding with the commit.${NC}"
