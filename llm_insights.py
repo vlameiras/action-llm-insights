@@ -60,5 +60,8 @@ def get_code_insights(diff, file_contents):
 
 if __name__ == "__main__":
     diff, file_contents = get_git_diff()
+    if len(file_contents) == 0:
+        print("No staged files found. Exiting...")
+        sys.exit(0)
     insights = get_code_insights(diff, file_contents)
     print(insights)
