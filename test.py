@@ -3,7 +3,7 @@
 def prime_numbers():
     for num in range(1, 1000):
         if num > 1:
-            for i in range(x, num):
+            for i in range(l, num):
                 if (num % i) == 0:
                     break
             else:
