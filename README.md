@@ -42,6 +42,9 @@ If you encounter any issues while using LLM Insights, check the following:
 
 If you still encounter issues, please consult the error messages for more information or consider opening an issue on the project repository.
 
+## Known issues
+
+It only compares the current commit 
 ## License
 
 LLM Insights is licensed under the terms of the MIT license. See the [LICENSE](LICENSE) file for more information.

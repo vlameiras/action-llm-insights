@@ -42,7 +42,8 @@ def get_code_insights(diff, file_contents):
                 f"the insights should be detailed and relevant for the developer. "
                 f"Present code snippets for bugs and fixes:\n\n"
                 f"--- Code Diff ---\n{diff}\n\n"
-                f"--- Changed Files ---\n{file_contents}\n"
+                f"--- Changed Files ---\n{file_contents}\n\n"
+                f"Use colors to pretty print the output and highlight each section\n"
             ),
             temperature=0.1,
             max_tokens=300,
